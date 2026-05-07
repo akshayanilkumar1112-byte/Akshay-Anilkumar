@@ -3,8 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+  html, body {
+    @apply overflow-x-hidden w-full max-w-[100vw] m-0 p-0;
+  }
   body {
-    @apply bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-50 transition-colors duration-300 antialiased font-sans m-0 p-0 overflow-x-hidden;
+    @apply bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-50 transition-colors duration-300 antialiased font-sans;
   }
 }
 

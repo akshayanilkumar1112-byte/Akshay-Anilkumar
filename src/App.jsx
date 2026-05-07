@@ -8,6 +8,7 @@ import {
 import Navbar from './components/Navbar';
 import IntroAnimation from './components/IntroAnimation';
 import RacingGame from './components/RacingGame';
+import profileImg from './assets/WhatsApp Image 2026-05-07 at 2.05.51 PM.jpeg';
 
 const PROJECT_DATA = [
   { 
@@ -173,7 +174,7 @@ export default function App() {
   const [activeModal, setActiveModal] = useState(null);
 
   return (
-    <div className="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-50 selection:bg-blue-500 selection:text-white min-h-screen font-sans transition-colors duration-300">
+    <div className="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-50 selection:bg-blue-500 selection:text-white min-h-screen font-sans transition-colors duration-300 overflow-x-hidden w-full max-w-[100vw]">
       <AnimatePresence>
         {isLoading && <IntroAnimation onComplete={() => setIsLoading(false)} />}
       </AnimatePresence>
@@ -243,7 +244,7 @@ export default function App() {
               className="relative hidden lg:block"
             >
               <div className="w-[400px] h-[400px] rounded-full overflow-hidden border-8 border-white dark:border-slate-800 shadow-2xl relative z-10">
-                 <img src="/src/assets/WhatsApp Image 2026-05-07 at 2.05.51 PM.jpeg" alt="Akshay" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out cursor-pointer" />
+                 <img src={profileImg} alt="Akshay" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out cursor-pointer" />
               </div>
               {/* Decorative elements */}
               <div className="absolute -inset-4 bg-gradient-to-tr from-blue-500 to-indigo-500 rounded-full blur-2xl opacity-20 -z-10 animate-pulse"></div>
