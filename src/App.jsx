@@ -249,6 +249,19 @@ export default function App() {
               {/* Decorative elements */}
               <div className="absolute -inset-4 bg-gradient-to-tr from-blue-500 to-indigo-500 rounded-full blur-2xl opacity-20 -z-10 animate-pulse"></div>
             </motion.div>
+
+            {/* Mobile Photo (Hidden on laptop) */}
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.2 }}
+              className="relative flex lg:hidden w-full justify-center mt-2 mb-4"
+            >
+              <div className="w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] rounded-full overflow-hidden border-[6px] border-white dark:border-slate-800 shadow-xl relative z-10">
+                 <img src={profileImg} alt="Akshay" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out cursor-pointer" />
+              </div>
+              <div className="absolute inset-0 m-auto w-[300px] h-[300px] bg-gradient-to-tr from-blue-500 to-indigo-500 rounded-full blur-2xl opacity-20 -z-10 animate-pulse"></div>
+            </motion.div>
           </div>
         </section>
 
